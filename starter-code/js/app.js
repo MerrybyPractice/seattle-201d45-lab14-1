@@ -8,14 +8,16 @@ var Cart = function(items) {
 
 Cart.prototype.addItem = function(product, quantity) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+
 };
 
 Cart.prototype.saveToLocalStorage = function() {
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
-  var stringy_cart_content = JSON.stringify(Product.allProducts);
-  localStorage.setItem('Product.allProducts',stringy_cart_content);
-
+  var cartInLocal = JSON.stringify(Cart);
+  localStorage.setItem('cart_items', cartInLocal);
 };
+
+var clearLocal = browser.storage.local.clear();
 
 Cart.prototype.removeItem = function(item) {
   // TODO: Fill in this instance method to remove one item from the cart.
@@ -33,9 +35,7 @@ var Product = function(filePath, name) {
   this.name = name;
   Product.allProducts.push(this);
 };
-
 Product.allProducts = [];
-console.log(Product.allProducts);
 
 function generateCatalog() {
   new Product('assets/bag.jpg', 'Bag');
