@@ -5,6 +5,7 @@ var Cart = function(items) {
   // this.items is an array of CartItem instances.
   this.items = items;
 };
+// console.log('this.items - line 8 after cart constructor', this.items);
 
 Cart.prototype.addItem = function(product, quantity) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
@@ -19,7 +20,9 @@ Cart.prototype.saveToLocalStorage = function() {
   localStorage.setItem('cart_items', cartInLocal);
 };
 
-var clearLocal = localStorage.clear();
+function clearLocal () {
+  localStorage.clear();
+}
 
 Cart.prototype.removeItem = function(product, quantity) {
   // TODO: Fill in this instance method to remove one item from the cart.

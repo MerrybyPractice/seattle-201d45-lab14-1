@@ -5,7 +5,7 @@
 
 // Set up an empty cart for use on this page.
 var cart = new Cart([]);
-
+console.log('cart on catalog.js line 7, right after declared empty', Cart);
 // On screen load, we call this method to put all of the busmall options
 // (the things in the Product.allProducts array) into the drop down list.
 function populateForm() {
@@ -39,18 +39,16 @@ function handleSubmit(event) {
 
 
 function addSelectedItemToCart(item) {
-
+console.log('catalog.js, line 41 right after function add selelctor opened, item', item);
   //suss out the item picked from the select list
   var select_item = document.getElementById('items');
-  console.log(select_item.value);
+  
 
   //get the quantity
   var select_quantity = document.getElementById('quantity');
-  console.log(select_quantity.value);
 
   // TODO: using those, add one item to the Cart
   new CartItem(select_item.value,select_quantity.value);
-
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
