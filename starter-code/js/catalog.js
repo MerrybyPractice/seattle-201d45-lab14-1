@@ -1,5 +1,6 @@
 /* global Product, Cart */
 
+
 'use strict';
 
 // Set up an empty cart for use on this page.
@@ -48,12 +49,14 @@ function addSelectedItemToCart(item) {
   console.log(select_quantity.value);
 
   // TODO: using those, add one item to the Cart
-  new CartItem (select_item,select_quantity);
-  console.log(CartItem);
+  new CartItem(select_item.value,select_quantity.value);
+
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+function updateCounter() {
+
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
