@@ -19,7 +19,7 @@ Cart.prototype.saveToLocalStorage = function() {
   localStorage.setItem('cart_items', cartInLocal);
 };
 
-var clearLocal = browser.storage.local.clear();
+var clearLocal = localStorage.clear();
 
 Cart.prototype.removeItem = function(product, quantity) {
   // TODO: Fill in this instance method to remove one item from the cart.
