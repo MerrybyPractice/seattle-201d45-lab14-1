@@ -1,5 +1,5 @@
 /* global Product, Cart */
-
+var count = 0;
 
 'use strict';
 
@@ -32,6 +32,7 @@ function handleSubmit(event) {
   cart.saveToLocalStorage();
   updateCounter();
   updateCartPreview();
+  count++;
 
 }
 
@@ -53,7 +54,9 @@ console.log('catalog.js, line 41 right after function add selelctor opened, item
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {
-
+  var target= document.getElementById('itemCount');
+  target.textContent = (count);
+  
 }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
