@@ -1,5 +1,6 @@
 /* global Product, Cart */
 
+
 'use strict';
 
 // Set up an empty cart for use on this page.
@@ -47,12 +48,13 @@ console.log('catalog.js, line 41 right after function add selelctor opened, item
   var select_quantity = document.getElementById('quantity');
 
   // TODO: using those, add one item to the Cart
-  new CartItem (select_item,select_quantity);
-  
+  new CartItem(select_item.value,select_quantity.value);
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+function updateCounter() {
+
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {

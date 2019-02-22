@@ -1,5 +1,5 @@
 'use strict';
-
+var user_cart =[];
 // Cart constructor.
 var Cart = function(items) {
   // this.items is an array of CartItem instances.
@@ -33,6 +33,8 @@ Cart.prototype.removeItem = function(product, quantity) {
 var CartItem = function(product, quantity) {
   this.product = product;
   this.quantity = quantity;
+  user_cart.push(this);
+  console.log(user_cart);
 };
 
 // Product contructor.
